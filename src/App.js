@@ -1,9 +1,9 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.css";
 import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
-import Home from "./Home";
-import NationalParks from "./NationalParks";
-import Mountains from "./Mountains";
+import Home from "./pages/Home/Home";
+import NationalParks from "./pages/NationalParks/NationalParks";
+import Mountains from "./pages/Mountains/Mountains";
 import Footer from "./Footer";
 import Header from "./Header";
 

@@ -1,5 +1,5 @@
-import "./App.css";
-import MountainImg from "./assets/images/mountains/Adams-StoryImage_2.jpg"
+import "../../App.css";
+import MountainImg from "../../assets/images/mountains/Adams-StoryImage_2.jpg"
 import Container from "react-bootstrap/Container";
 import Image from 'react-bootstrap/Image';
 

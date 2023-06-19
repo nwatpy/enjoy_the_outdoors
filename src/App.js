@@ -5,16 +5,13 @@ import Home from "./Home";
 import NationalParks from "./NationalParks";
 import Mountains from "./Mountains";
 import Footer from "./Footer";
+import Header from "./Header";
 
 
 function App() {
   return (
     <Router>
-      <nav>
-        <Link to="/"> Home </Link>
-        <Link to="/nationalparks"> National Parks </Link>
-        <Link to="/mountains"> Mountains </Link>
-      </nav>
+      <Header/>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nationalparks" element={<NationalParks />} />

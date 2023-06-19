@@ -2,8 +2,8 @@ import { useState } from 'react';
 import "../../App.css";
 import "./Mountains.css";
 import Form from 'react-bootstrap/Form';
-import Image from 'react-bootstrap/Image';
 import mountains from "../../assets/data/mountains.json";
+import MountainCard from './MountainCard';
 
 function Mountains() {
   const [selectedMountain, setSelectedMountain] = useState(null);
@@ -15,9 +15,6 @@ function Mountains() {
 
   return (
     <div className="Mountain">
-      {selectedMountain && 
-        <Image src={process.env.PUBLIC_URL + "/images/mountains/Adams-StoryImage_2.jpg"} className="mountain-hero-image" fluid />
-      }
       <br></br>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Select a mountain</Form.Label>
@@ -31,10 +28,9 @@ function Mountains() {
         </Form.Select>
       </Form.Group>
       {selectedMountain && 
-        <div>
-          <h2>{selectedMountain.name}</h2>
-          <p>{selectedMountain.description}</p>
-        </div>
+      <MountainCard 
+        {...selectedMountain}
+      />
       }
     </div>
   );

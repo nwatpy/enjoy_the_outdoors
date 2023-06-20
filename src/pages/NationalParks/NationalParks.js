@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import Form from "react-bootstrap/Form";
+import Container from "react-bootstrap/Container";
 import locations from "../../assets/data/locations.json";
 import parktypes from "../../assets/data/parktypes.json";
 import "../../App.css";
@@ -38,7 +39,8 @@ function NationalParks() {
   }, [parkType]);
 
   return (
-    <div className="National-Parks">
+    <Container>
+    <div className="">
       <br></br>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Filter by:</Form.Label>
@@ -89,8 +91,9 @@ function NationalParks() {
           </>
         )}
       </Form.Group>
+      </div>
       {parkList ? <NationalParkList parkList={parkList} /> : null}
-    </div>
+     </Container>
   );
 }
 

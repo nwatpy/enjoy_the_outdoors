@@ -8,20 +8,18 @@ import Footer from "./Footer";
 import Header from "./Header";
 import RandomParks from "./pages/RandomParks/RandomParks";
 
-
 function App() {
   return (
     <Router>
-      <Header/>
-      <div className="background-image">
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/nationalparks" element={<NationalParks />} />
         <Route path="/mountains" element={<Mountains />} />
       </Routes>
       <RandomParks />
-      </div>
-      <Footer/>
+
+      <Footer />
     </Router>
   );
 }

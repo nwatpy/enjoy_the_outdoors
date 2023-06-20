@@ -1,8 +1,8 @@
 import "../../App.css";
-import parklist from "../../assets/data/nationalparks.json";
+//import parklist from "../../assets/data/nationalparks.json";
 import Table from "react-bootstrap/Table";
 
-function NationalParkList() {
+function NationalParkList(parkList) {
   return (
     <Table striped bordered hover>
       <thead>
@@ -15,7 +15,7 @@ function NationalParkList() {
         </tr>
       </thead>
       <tbody>
-        {parklist.parks.map((park) => {
+        {parkList.parkList.map((park) => {
           return (
             <tr key={park.LocationId}>
               <td>{park.LocationName}</td>

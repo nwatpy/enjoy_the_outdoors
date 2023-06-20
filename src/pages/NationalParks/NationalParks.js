@@ -39,7 +39,7 @@ function NationalParks() {
   }, [parkType]);
 
   return (
-    <div className="background-image">
+    <div>
       <Container>
       <div className="">
         <br></br>

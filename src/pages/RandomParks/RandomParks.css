@@ -1,0 +1,10 @@
+.RandomParks {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 60px;
+}
+
+.RandomParkCard {
+    margin: 10px;
+}

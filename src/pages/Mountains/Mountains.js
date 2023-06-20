@@ -14,7 +14,7 @@ function Mountains() {
   }
 
   return (
-    <div className="background-image">
+    <div>
       <div className="Mountain">
         <br></br>
         <Form.Group className="mb-3" controlId="formBasicEmail">

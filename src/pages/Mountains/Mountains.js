@@ -14,24 +14,26 @@ function Mountains() {
   }
 
   return (
-    <div className="Mountain">
-      <br></br>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Select a mountain</Form.Label>
-        <Form.Select aria-label="Default select example" onChange={handleMountainChange}>
-          <option>Open this select menu</option>
-          {mountains.mountains.map((mountain) => {
-            return (
-              <option key={mountain.name} value={mountain.name}>{mountain.name}</option>
-            )
-          })}
-        </Form.Select>
-      </Form.Group>
-      {selectedMountain && 
-      <MountainCard 
-        {...selectedMountain}
-      />
-      }
+    <div className="background-image">
+      <div className="Mountain">
+        <br></br>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Select a mountain</Form.Label>
+          <Form.Select aria-label="Default select example" onChange={handleMountainChange}>
+            <option>Open this select menu</option>
+            {mountains.mountains.map((mountain) => {
+              return (
+                <option key={mountain.name} value={mountain.name}>{mountain.name}</option>
+              )
+            })}
+          </Form.Select>
+        </Form.Group>
+        {selectedMountain && 
+        <MountainCard 
+          {...selectedMountain}
+        />
+        }
+      </div>
     </div>
   );
 }

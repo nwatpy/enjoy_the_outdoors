@@ -39,61 +39,63 @@ function NationalParks() {
   }, [parkType]);
 
   return (
-    <Container>
-    <div className="">
-      <br></br>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Filter by:</Form.Label>
-        <Form.Select
-          aria-label="Default select example"
-          onChange={handleFilterByChange}
-        >
-          <option key="Location" value="Location">
-            Location
-          </option>
-          <option key="Park Type" value="Park Type">
-            Park Type
-          </option>
-        </Form.Select>
-        {filterBy === "Location" ? (
-          <>
-            <Form.Label>Select a location</Form.Label>
-            <Form.Select
-              aria-label="Default select example"
-              onChange={handleLocationChange}
-            >
-              <option>Open this select menu</option>
-              {locations.map((location) => {
-                return (
-                  <option key={location} value={location}>
-                    {location}
-                  </option>
-                );
-              })}
-            </Form.Select>
-          </>
-        ) : (
-          <>
-            <Form.Label>Select a park type</Form.Label>
-            <Form.Select
-              aria-label="Default select example"
-              onChange={handleParkTypeChange}
-            >
-              <option>Open this select menu</option>
-              {parktypes.map((parktype) => {
-                return (
-                  <option key={parktype} value={parktype}>
-                    {parktype}
-                  </option>
-                );
-              })}
-            </Form.Select>
-          </>
-        )}
-      </Form.Group>
-      </div>
-      {parkList ? <NationalParkList parkList={parkList} /> : null}
-     </Container>
+    <div className="background-image">
+      <Container>
+      <div className="">
+        <br></br>
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Filter by:</Form.Label>
+          <Form.Select
+            aria-label="Default select example"
+            onChange={handleFilterByChange}
+          >
+            <option key="Location" value="Location">
+              Location
+            </option>
+            <option key="Park Type" value="Park Type">
+              Park Type
+            </option>
+          </Form.Select>
+          {filterBy === "Location" ? (
+            <>
+              <Form.Label>Select a location</Form.Label>
+              <Form.Select
+                aria-label="Default select example"
+                onChange={handleLocationChange}
+              >
+                <option>Open this select menu</option>
+                {locations.map((location) => {
+                  return (
+                    <option key={location} value={location}>
+                      {location}
+                    </option>
+                  );
+                })}
+              </Form.Select>
+            </>
+          ) : (
+            <>
+              <Form.Label>Select a park type</Form.Label>
+              <Form.Select
+                aria-label="Default select example"
+                onChange={handleParkTypeChange}
+              >
+                <option>Open this select menu</option>
+                {parktypes.map((parktype) => {
+                  return (
+                    <option key={parktype} value={parktype}>
+                      {parktype}
+                    </option>
+                  );
+                })}
+              </Form.Select>
+            </>
+          )}
+        </Form.Group>
+        </div>
+        {parkList ? <NationalParkList parkList={parkList} /> : null}
+       </Container>
+    </div>
   );
 }
 

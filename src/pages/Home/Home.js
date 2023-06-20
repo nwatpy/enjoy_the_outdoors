@@ -1,13 +1,13 @@
 import "../../App.css";
 import Container from "react-bootstrap/Container";
-import Image from "react-bootstrap/Image";
 
 function Home() {
   return (
-    <Container className="pt-2">
-      This is where we are going to put something. GO to the moutains, dont
-      waste your time importing images.
-    </Container>
+    <div className="background-image">
+      <Container className="pt-2">
+        This is where we are going to put something. Go to the mountains, don't waste your time importing images.
+      </Container>
+    </div>
   );
 }
 

@@ -4,6 +4,7 @@ import locations from "../../assets/data/locations.json";
 import parktypes from "../../assets/data/parktypes.json";
 import "../../App.css";
 import "./NationalParks.css";
+import NationalParkList from "./NationalParkList";
 
 function NationalParks() {
     const [filterBy, setFilterBy] = useState("Location");
@@ -19,9 +20,6 @@ function NationalParks() {
         setParkType(e.target.value);
     }
 
-    console.log(filterBy)
-    console.log(location)
-    console.log(parkType)
     return (
         <div className="National-Parks">
             <br></br>
@@ -56,7 +54,8 @@ function NationalParks() {
                         </Form.Select>
                     </>
                 )}
-            </Form.Group>
+            </Form.Group>  
+            <NationalParkList/>      
         </div>
     )
 }

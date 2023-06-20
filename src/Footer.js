@@ -3,12 +3,11 @@ import Container from "react-bootstrap/Container";
 import Navbar from "react-bootstrap/Navbar";
 
 function Footer() {
-  const year = new Date().getFullYear();
   return (
     <Navbar bg="primary" data-bs-theme="dark">
       <Container>
         <Navbar.Brand href="#home">
-          &copy;Enjoy the Outdoors - {year}{" "}
+          &copy;Enjoy the Outdoors - {new Date().getFullYear()}
         </Navbar.Brand>
       </Container>
     </Navbar>

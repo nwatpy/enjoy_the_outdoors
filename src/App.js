@@ -12,13 +12,14 @@ function App() {
   return (
     <Router>
       <Header />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/nationalparks" element={<NationalParks />} />
-        <Route path="/mountains" element={<Mountains />} />
-      </Routes>
-      <RandomParks />
-
+      <div className="Body">
+        <RandomParks />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/nationalparks" element={<NationalParks />} />
+          <Route path="/mountains" element={<Mountains />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );

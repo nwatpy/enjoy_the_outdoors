@@ -10,7 +10,8 @@ function RandomParkCard({ park }) {
   return (
     <Card key={park.LocationName} className="RandomParkCard">
       <Card.Body>
-        <Card.Title>{park.LocationName}</Card.Title>
+        <Card.Img src={park.img} />
+        <Card.Title className="pt-2">{park.LocationName}</Card.Title>
         <Card.Text>
           Located in beautiful {park.City}, {park.State}.
         </Card.Text>

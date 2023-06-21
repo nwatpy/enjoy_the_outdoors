@@ -8,24 +8,44 @@ import Footer from "./Footer";
 import Header from "./Header";
 import mountainList from "./assets/data/mountains.json";
 import parklist from "./assets/data/nationalparks.json";
+import getParkImage from "./utils";
+import { useEffect, useState } from "react";
 
 function App() {
   const mountainsToDisplay = [];
-  const parksToDisplay = [];
+  const [parksToDisplay, setParksToDisplay] = useState([]);
   const mountains = mountainList.mountains;
 
   while (mountainsToDisplay.length < 3) {
     const mountainNumber = Math.floor(Math.random() * mountains.length);
     mountainsToDisplay.push(mountains[mountainNumber]);
   }
+  
+  useEffect(() => {
+    getParksToDisplay();
+  }, [])
 
-  while (parksToDisplay.length < 3) {
-    const parkNumber = Math.floor(Math.random() * parklist.parks.length);
-    if (parklist.parks[parkNumber]?.Visit) {
-      parksToDisplay.push(parklist.parks[parkNumber]);
+  const getParksToDisplay = async () => {
+    const parksToDisplay = [];
+    while (parksToDisplay.length < 3) {
+      const parkNumber = Math.floor(Math.random() * parklist.parks.length);
+      if (parklist.parks[parkNumber]?.Visit) {
+        let parkWithImage = parklist.parks[parkNumber];
+        const img = await getParkImage(parkWithImage.LocationID);
+        if (img) {
+          parkWithImage.img = img;
+          parksToDisplay.push(parkWithImage);
+        }
+      }
     }
+    setParksToDisplay(parksToDisplay);
   }
+  
 
+
+  console.log(parksToDisplay)
+
+  
 
   return (
     <Router>

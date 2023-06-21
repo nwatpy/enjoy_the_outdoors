@@ -20,7 +20,7 @@ function MountainCard({img, desc, elevation, effort, coords}) {
       <Card className="mb-3">
         <Card.Body>
           <Card.Text>
-            {desc} <br/>
+            {desc} <p/>
             <strong>Elevation:</strong> {elevation} feet <br/>
             <strong>Effort Required:</strong> {effort} <br/>
             <strong>Latitude:</strong> {coords.lat}, <strong>Longitude:</strong> {coords.lng} <br/>

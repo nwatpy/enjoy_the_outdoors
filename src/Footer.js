@@ -4,7 +4,7 @@ import Navbar from "react-bootstrap/Navbar";
 
 function Footer() {
   return (
-    <Navbar bg="primary" variant="dark" fixed="bottom">
+    <Navbar bg="primary" variant="dark">
       <Container>
         <Navbar.Brand>
           &copy;Enjoy the Outdoors - {new Date().getFullYear()}

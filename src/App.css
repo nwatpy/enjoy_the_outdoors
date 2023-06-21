@@ -69,4 +69,10 @@ a {
   text-decoration: none !important;
 }
 
+.spinner {
+  display: block !important;
+  position: center ;
+  margin-top: 10px;
+}
+
 

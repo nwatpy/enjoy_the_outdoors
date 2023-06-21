@@ -41,12 +41,6 @@ function App() {
     setParksToDisplay(parksToDisplay);
   }
   
-
-
-  console.log(parksToDisplay)
-
-  
-
   return (
     <Router>
       <Header />

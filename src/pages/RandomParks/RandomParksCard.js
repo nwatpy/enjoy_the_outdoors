@@ -8,7 +8,7 @@ function RandomParkCard({ park }) {
   };
 
   return (
-    <Card className="RandomParkCard">
+    <Card key={park.LocationName} className="RandomParkCard">
       <Card.Body>
         <Card.Text>
           <h3>{park.LocationName}</h3>

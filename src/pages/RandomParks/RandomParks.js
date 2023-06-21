@@ -6,8 +6,8 @@ function RandomParks() {
   const parksToDisplay = [];
 
   while (parksToDisplay.length < 3) {
-    const parkNumber = Math.floor(Math.random() * parklist.parks.length) + 1;
-    if (parklist.parks[parkNumber].Visit) {
+    const parkNumber = Math.floor(Math.random() * parklist.parks.length);
+    if (parklist.parks[parkNumber]?.Visit) {
       parksToDisplay.push(parklist.parks[parkNumber]);
     }
   }

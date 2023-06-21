@@ -13,7 +13,8 @@ function Header() {
         data-bs-theme="dark"
       >
         <Container>
-          <Navbar.Brand href="#home">Enjoy the Outdoors</Navbar.Brand>
+          <Navbar.Brand>Enjoy the Outdoors</Navbar.Brand>
+          <Navbar.Collapse classNam="justify-content-end">
           <Nav className="me-auto">
             <Nav.Link>
               <Link to="/">Home</Link>
@@ -25,6 +26,7 @@ function Header() {
               <Link to="/mountains">Mountains</Link>
             </Nav.Link>
           </Nav>
+          </Navbar.Collapse>
         </Container>
         <br></br>
       </Navbar>

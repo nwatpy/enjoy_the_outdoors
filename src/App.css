@@ -60,4 +60,13 @@
   max-width: 50rem !important;
 }
 
+a:visited {
+  color: white; /* same color as regular state */
+}
+
+a {
+  color: white; /* or whatever color you want */
+  text-decoration: none !important;
+}
+
 

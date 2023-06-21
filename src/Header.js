@@ -11,7 +11,6 @@ function Header() {
       <Navbar
         bg="primary"
         data-bs-theme="dark"
-        className="mountain-hero-image "
       >
         <Container>
           <Navbar.Brand href="#home">Enjoy the Outdoors</Navbar.Brand>

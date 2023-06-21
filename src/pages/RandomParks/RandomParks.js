@@ -12,8 +12,6 @@ function RandomParks() {
     }
   }
 
-  console.log(parksToDisplay);
-
   return (
     <div className="RandomParks">
       {parksToDisplay.map((park) => (

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import "../../App.css";
 import "./Mountains.css";
 import Form from 'react-bootstrap/Form';
+import Container from 'react-bootstrap/Container';
 import mountains from "../../assets/data/mountains.json";
 import MountainCard from './MountainCard';
 import RandomMountains from '../RandomMountains/RandomMountains';
@@ -17,7 +18,7 @@ function Mountains({mountainsToDisplay}) {
   return (
     <div>
       <RandomMountains mountainsToDisplay={mountainsToDisplay} />
-      <div className="Mountain">
+      <Container>
         <br></br>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Select a mountain</Form.Label>
@@ -35,7 +36,7 @@ function Mountains({mountainsToDisplay}) {
           {...selectedMountain}
         />
         }
-      </div>
+      </Container>
     </div>
   );
 }

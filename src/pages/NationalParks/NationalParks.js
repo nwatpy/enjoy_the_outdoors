@@ -9,7 +9,7 @@ import NationalParkList from "./NationalParkList";
 import allParks from "../../assets/data/nationalparks.json";
 import RandomParks from "../RandomParks/RandomParks";
 
-function NationalParks() {
+function NationalParks({parksToDisplay}) {
   const [filterBy, setFilterBy] = useState("Location");
   const [location, setLocation] = useState(null);
   const [parkType, setParkType] = useState(null);
@@ -41,7 +41,7 @@ function NationalParks() {
 
   return (
     <div>
-      <RandomParks />
+      <RandomParks parksToDisplay={parksToDisplay} />
       <Container>
       <div className="">
         <br></br>

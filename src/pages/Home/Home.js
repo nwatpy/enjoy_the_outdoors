@@ -4,14 +4,15 @@ import RandomMountains from "../RandomMountains/RandomMountains";
 import RandomParks from "../RandomParks/RandomParks";
 import HomeText from "./HomeText";
 
-function Home() {
+function Home({parksToDisplay, mountainsToDisplay}) {
+
   return (
     <div>
-      <RandomParks />
+      <RandomParks parksToDisplay={parksToDisplay} />
       <Container className="pt-2">
         <HomeText />
       </Container>
-      <RandomMountains />
+      <RandomMountains mountainsToDisplay={mountainsToDisplay} />
     </div>
   );
 }

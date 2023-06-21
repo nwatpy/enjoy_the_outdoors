@@ -6,7 +6,7 @@ import mountains from "../../assets/data/mountains.json";
 import MountainCard from './MountainCard';
 import RandomMountains from '../RandomMountains/RandomMountains';
 
-function Mountains() {
+function Mountains({mountainsToDisplay}) {
   const [selectedMountain, setSelectedMountain] = useState(null);
 
   const handleMountainChange = (e) => {
@@ -16,7 +16,7 @@ function Mountains() {
 
   return (
     <div>
-      <RandomMountains />
+      <RandomMountains mountainsToDisplay={mountainsToDisplay} />
       <div className="Mountain">
         <br></br>
         <Form.Group className="mb-3" controlId="formBasicEmail">

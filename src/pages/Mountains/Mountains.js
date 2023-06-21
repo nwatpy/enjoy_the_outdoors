@@ -20,8 +20,8 @@ function Mountains({mountainsToDisplay}) {
       <RandomMountains mountainsToDisplay={mountainsToDisplay} />
       <Container className="container-width">
         <br></br>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Select a mountain</Form.Label>
+        <Form.Group className="mb-3 " controlId="formBasicEmail">
+          <Form.Label className="h4 fw-bolder">Select a Mountain</Form.Label>
           <Form.Select aria-label="Default select example" onChange={handleMountainChange}>
             <option>Open this select menu</option>
             {mountains.mountains.map((mountain) => {

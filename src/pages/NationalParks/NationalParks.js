@@ -46,8 +46,8 @@ function NationalParks({parksToDisplay}) {
       <div className="">
         <br></br>
         <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Filter by:</Form.Label>
-          <Form.Select
+          <Form.Label className="h4 fw-bolder">Filter by:</Form.Label>
+          <Form.Select className="mb-3"
             aria-label="Default select example"
             onChange={handleFilterByChange}
           >
@@ -60,7 +60,7 @@ function NationalParks({parksToDisplay}) {
           </Form.Select>
           {filterBy === "Location" ? (
             <>
-              <Form.Label>Select a location</Form.Label>
+              <Form.Label className="h4 fw-bolder">Select a location:</Form.Label>
               <Form.Select
                 aria-label="Default select example"
                 onChange={handleLocationChange}

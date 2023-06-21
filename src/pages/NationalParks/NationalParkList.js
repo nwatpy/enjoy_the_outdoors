@@ -1,6 +1,6 @@
 import "../../App.css";
 import Table from "react-bootstrap/Table";
-
+import { Link } from "react-router-dom";
 function NationalParkList(parkList) {
   return (
     <Table striped bordered hover>
@@ -17,7 +17,9 @@ function NationalParkList(parkList) {
         {parkList.parkList.map((park) => {
           return (
             <tr key={park.LocationId}>
-              <td>{park.LocationName}</td>
+              <td>
+                <a target="_blank" href={park.Visit}>{park.LocationName}</a>
+              </td>
               <td>{park.Address}</td>
               <td>{park.City}</td>
               <td>{park.State}</td>

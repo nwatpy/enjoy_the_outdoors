@@ -18,7 +18,7 @@ function Mountains({mountainsToDisplay}) {
   return (
     <div>
       <RandomMountains mountainsToDisplay={mountainsToDisplay} />
-      <Container>
+      <Container className="container-width">
         <br></br>
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Select a mountain</Form.Label>

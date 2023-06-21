@@ -42,7 +42,7 @@ function NationalParks({parksToDisplay}) {
   return (
     <div>
       <RandomParks parksToDisplay={parksToDisplay} />
-      <Container>
+      <Container className="container-width">
       <div className="">
         <br></br>
         <Form.Group className="mb-3" controlId="formBasicEmail">

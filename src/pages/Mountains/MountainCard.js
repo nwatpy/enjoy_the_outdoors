@@ -17,7 +17,7 @@ function MountainCard({img, desc, elevation, effort, coords}) {
 
   return (
     <>
-      <Card>
+      <Card className="mb-3">
         <Card.Body>
           <Card.Text>
             {desc} <br/>

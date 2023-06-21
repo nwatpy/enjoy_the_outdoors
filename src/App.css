@@ -44,9 +44,10 @@
   font-family: "Titillium Web";
   background: url('/public/images/mountainbackgroundblue.jpeg') no-repeat center center fixed;
   background-size: cover;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
+  margin-bottom: 60px; /* add a margin equal to the height of the footer */
 }
 
 @media only screen and (max-width: 768px) {
@@ -54,5 +55,6 @@
     height: auto;
   }
 }
+
 
 

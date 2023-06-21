@@ -9,7 +9,7 @@ function Home({parksToDisplay, mountainsToDisplay}) {
   return (
     <div>
       <RandomParks parksToDisplay={parksToDisplay} />
-      <Container className="pt-2">
+      <Container className="pt-2 container-width">
         <HomeText />
       </Container>
       <RandomMountains mountainsToDisplay={mountainsToDisplay} />

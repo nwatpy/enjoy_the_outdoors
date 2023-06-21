@@ -56,5 +56,8 @@
   }
 }
 
+.container-width {
+  max-width: 50rem !important;
+}
 
 

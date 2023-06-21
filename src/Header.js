@@ -13,22 +13,24 @@ function Header() {
         data-bs-theme="dark"
       >
         <Container>
-          <Navbar.Brand>Enjoy the Outdoors</Navbar.Brand>
-          <Navbar.Collapse classNam="justify-content-end">
-          <Nav className="me-auto">
-            <Nav.Link>
-              <Link to="/">Home</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/nationalparks">National Parks</Link>
-            </Nav.Link>
-            <Nav.Link>
-              <Link to="/mountains">Mountains</Link>
-            </Nav.Link>
-          </Nav>
+          <Link to="/">
+            <Navbar.Brand>Enjoy the Outdoors</Navbar.Brand>
+          </Link>
+          <Navbar.Toggle aria-controls="navbar-nav" />
+          <Navbar.Collapse id="navbar-nav" className="justify-content-end">
+            <Nav>
+              <Nav.Link>
+                <Link to="/">Home</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/nationalparks">National Parks</Link>
+              </Nav.Link>
+              <Nav.Link>
+                <Link to="/mountains">Mountains</Link>
+              </Nav.Link>
+            </Nav>
           </Navbar.Collapse>
         </Container>
-        <br></br>
       </Navbar>
     </>
   );

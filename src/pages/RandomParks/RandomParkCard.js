@@ -10,19 +10,13 @@ function RandomParkCard({ park }) {
   return (
     <Card key={park.LocationName} className="RandomParkCard">
       <Card.Body>
+        <Card.Title>{park.LocationName}</Card.Title>
         <Card.Text>
-          <h3>{park.LocationName}</h3>
-          <p>
-            Located in beautiful {park.City}, {park.State}.
-          </p>
-          <Button
-            variant="primary"
-            type="submit"
-            onClick={handleMoreInformation}
-          >
-            More information
-          </Button>
+          Located in beautiful {park.City}, {park.State}.
         </Card.Text>
+        <Button variant="primary" type="submit" onClick={handleMoreInformation}>
+          More information
+        </Button>
       </Card.Body>
     </Card>
   );

@@ -1,0 +1,11 @@
+.RandomMountains {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 60px;
+}
+
+.RandomMountainCard {
+    margin: 10px;
+    max-width: 250px;
+}

@@ -4,6 +4,7 @@ import "./Mountains.css";
 import Form from 'react-bootstrap/Form';
 import mountains from "../../assets/data/mountains.json";
 import MountainCard from './MountainCard';
+import RandomMountains from '../RandomMountains/RandomMountains';
 
 function Mountains() {
   const [selectedMountain, setSelectedMountain] = useState(null);
@@ -15,6 +16,7 @@ function Mountains() {
 
   return (
     <div>
+      <RandomMountains />
       <div className="Mountain">
         <br></br>
         <Form.Group className="mb-3" controlId="formBasicEmail">

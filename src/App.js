@@ -6,14 +6,12 @@ import NationalParks from "./pages/NationalParks/NationalParks";
 import Mountains from "./pages/Mountains/Mountains";
 import Footer from "./Footer";
 import Header from "./Header";
-import RandomParks from "./pages/RandomParks/RandomParks";
 
 function App() {
   return (
     <Router>
       <Header />
       <div className="Body">
-        <RandomParks />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/nationalparks" element={<NationalParks />} />

@@ -1,5 +1,5 @@
 import "./RandomParks.css";
-import RandomParkCard from "./RandomParksCard";
+import RandomParkCard from "./RandomParkCard";
 import parklist from "../../assets/data/nationalparks.json";
 
 function RandomParks() {

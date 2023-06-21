@@ -1,5 +1,4 @@
 import "../../App.css";
-//import parklist from "../../assets/data/nationalparks.json";
 import Table from "react-bootstrap/Table";
 
 function NationalParkList(parkList) {

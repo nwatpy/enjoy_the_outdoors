@@ -11,6 +11,7 @@ function NationalParkList(parkList) {
           <th>City</th>
           <th>State</th>
           <th>Location ID</th>
+          <th>Park Details</th>
         </tr>
       </thead>
       <tbody>
@@ -18,12 +19,17 @@ function NationalParkList(parkList) {
           return (
             <tr key={park.LocationId}>
               <td>
-                <a target="_blank" href={park.Visit}>{park.LocationName}</a>
+                <a target="_blank" href={park.Visit}>
+                  {park.LocationName}
+                </a>
               </td>
               <td>{park.Address}</td>
               <td>{park.City}</td>
               <td>{park.State}</td>
               <td>{park.LocationID}</td>
+              <td>
+                <Link to={`/parkinfo/${park.LocationID}/${park.LocationName}`}>Park Details </Link>
+              </td>
             </tr>
           );
         })}

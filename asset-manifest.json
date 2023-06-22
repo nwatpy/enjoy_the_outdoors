@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/enjoy_the_outdoors/static/css/main.d5c11465.css",
+    "main.js": "/enjoy_the_outdoors/static/js/main.43159597.js",
+    "static/js/787.304d8fbc.chunk.js": "/enjoy_the_outdoors/static/js/787.304d8fbc.chunk.js",
+    "static/media/mountainbackgroundblue.jpeg": "/enjoy_the_outdoors/static/media/mountainbackgroundblue.40da436f9e3c631c7ec7.jpeg",
+    "index.html": "/enjoy_the_outdoors/index.html",
+    "main.d5c11465.css.map": "/enjoy_the_outdoors/static/css/main.d5c11465.css.map",
+    "main.43159597.js.map": "/enjoy_the_outdoors/static/js/main.43159597.js.map",
+    "787.304d8fbc.chunk.js.map": "/enjoy_the_outdoors/static/js/787.304d8fbc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d5c11465.css",
+    "static/js/main.43159597.js"
+  ]
+}

@@ -16,7 +16,7 @@ function Footer() {
             <Nav.Link>
               <Link to="/SkiFree">
                 <Image
-                  src="abomsnowman.gif"
+                  src={require('./abomsnowman.gif')}
                   alt="Abominable Snowman icon"
                   width="60"
                   height="60"

@@ -40,8 +40,7 @@ function NationalParks({parksToDisplay}) {
   }, [parkType]);
 
   return (
-    <div>
-      <RandomParks parksToDisplay={parksToDisplay} />
+    <div className="NationalParksList">
       <Container className="container-width">
       <div className="">
         <br></br>
@@ -97,6 +96,7 @@ function NationalParks({parksToDisplay}) {
         </div>
         {parkList ? <NationalParkList parkList={parkList} /> : null}
        </Container>
+       <RandomParks parksToDisplay={parksToDisplay} />
     </div>
   );
 }

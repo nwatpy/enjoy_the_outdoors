@@ -8,7 +8,7 @@ import Image from "react-bootstrap/Image";
 function Header() {
   return (
     <>
-      <Navbar bg="primary" data-bs-theme="dark">
+      <Navbar className="header-navbar" bg="primary" data-bs-theme="dark">
         <Container>
           <Link to="/">
             <Navbar.Brand>Enjoy the Outdoors</Navbar.Brand>

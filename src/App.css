@@ -59,7 +59,7 @@
   max-width: 50rem !important;
 }
 
-a:visited {
+.header-navbar a:visited {
   color: white; /* same color as regular state */
 }
 

@@ -1,40 +1,26 @@
-
-import Card from "react-bootstrap/Card";
-import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getParkImages } from "../../utils";
-import { CardGroup, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
+import ParkImages from "./ParkImages";
+import ParkCampgrounds from "./ParkCampgrounds";
+import ParkArticles from "./ParkArticles";
+
 
 function ParkInfo() {
   const { locationID, locationName } = useParams();
-  const [images, setImages] = useState([]);
-
-  useEffect(() => {
-    if (locationID) {
-      getParkInfo();
-    }
-  }, [locationID])
-
-  const getParkInfo = async () => {
-    const images = await getParkImages(locationID, 3);
-    setImages(images);
-  }
-
 
   return (
     <Container>
       <h1>{locationName}</h1>
       <h2>{locationID}</h2>
-      <CardGroup>
-        {images.length > 0 &&
-          images.map((image) => (
 
-            <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src={image} />
-            </Card>
-          ))
-        }
-      </CardGroup>
+      <h1>Images</h1>
+      <ParkImages locationID={locationID} />
+      <p></p>
+      <h1>Campgrounds</h1>
+      <ParkCampgrounds locationID={locationID} />
+      <p></p>
+      <h1>Articles</h1>
+      <ParkArticles locationID={locationID} />
     </Container>
   );
 }

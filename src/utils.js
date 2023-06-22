@@ -19,20 +19,38 @@ const getParkImages = async (parkCode, numOfImages) => {
     return images;
 }
 
-
 const getParkAmenities = async (parkCode) => {
-    const res = await axios.get(`https://developer.nps.gov/api/v1/amenities?parkCode=${parkCode}&api_key=${apiKey}&limit=5`);
+    const res = await axios.get(`https://developer.nps.gov/api/v1/amenities?parkCode=${parkCode}&api_key=${apiKey}&limit=3`);
+    const amenities = [];
     if (res.status === 200) {
-        return res.data.data[0]?.fileInfo.url;
+        res.data.data.forEach(function (amenity) {
+            amenities.push(amenity);
+        });
+        return amenities;
     }
 }
 
 const getParkArticles = async (parkCode) => {
-    const res = await axios.get(`https://developer.nps.gov/api/v1/articles?parkCode=${parkCode}&api_key=${apiKey}&limit=1`);
+    const res = await axios.get(`https://developer.nps.gov/api/v1/articles?parkCode=${parkCode}&api_key=${apiKey}&limit=3`);
+    const articles = [];
     if (res.status === 200) {
-        return res.data.data[0]?.fileInfo.url;
+        res.data.data.forEach(function (article) {
+            articles.push(article);
+        });
+        return articles;
+    }
+}
+
+const getParkCampgrounds = async (parkCode) => {
+    const res = await axios.get(`https://developer.nps.gov/api/v1/campgrounds?parkCode=${parkCode}&api_key=${apiKey}&limit=3`);
+    const campgrounds = [];
+    if (res.status === 200) {
+        res.data.data.forEach(function (campground) {
+            campgrounds.push(campground);
+        });
+        return campgrounds;
     }
 }
 
 
-export { getParkImage, getParkImages, getParkAmenities, getParkArticles };
+export { getParkImage, getParkImages, getParkAmenities, getParkArticles, getParkCampgrounds };

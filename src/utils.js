@@ -1,5 +1,6 @@
 import axios from "axios";
-const apiKey = "el1exbrk6jVfffHnExYVFyYGOTGRzjprAHoKpQ1d";
+
+const apiKey = process.env.REACT_APP_NATIONALPARKSAPI;
 
 const getParkImage = async (parkCode) => {
     const res = await axios.get(`https://developer.nps.gov/api/v1/multimedia/galleries/assets?parkCode=${parkCode}&api_key=${apiKey}&limit=1`);
@@ -33,6 +34,5 @@ const getParkArticles = async (parkCode) => {
         return res.data.data[0]?.fileInfo.url;
     }
 }
-
 
 export { getParkImage, getParkImages, getParkAmenities, getParkArticles };

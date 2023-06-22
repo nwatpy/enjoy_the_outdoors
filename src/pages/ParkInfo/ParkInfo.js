@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { Card, Container } from "react-bootstrap";
+import "./ParkInfo.css";
 import ParkImages from "./ParkImages";
 import ParkCampgrounds from "./ParkCampgrounds";
 import ParkArticles from "./ParkArticles";
@@ -12,14 +13,13 @@ function ParkInfo() {
     <Container className="mb-5">
       <h1 className="mt-5">{locationName}</h1>
       <h2 className="mb-5">Park ID: {locationID}</h2>
-      <Card><h1 className="mt-5">Images</h1></Card>
-      
+      <h1 className="title-bar">Images</h1>
       <ParkImages locationID={locationID} />
 
-      <Card><h1 className="mt-5">Campgrounds</h1></Card>
+      <h1 className="title-bar">Campgrounds</h1>
       <ParkCampgrounds locationID={locationID} />
 
-      <Card><h1 className="mt-5">Articles</h1></Card>
+      <h1 className="title-bar">Articles</h1>
       <ParkArticles locationID={locationID} />
     </Container>
   );

@@ -17,26 +17,28 @@ function Mountains({mountainsToDisplay}) {
 
   return (
     <div>
-      <RandomMountains mountainsToDisplay={mountainsToDisplay} />
-      <Container className="container-width">
-        <br></br>
-        <Form.Group className="mb-3 " controlId="formBasicEmail">
-          <Form.Label className="h4 fw-bolder">Select a Mountain</Form.Label>
-          <Form.Select aria-label="Default select example" onChange={handleMountainChange}>
-            <option>Open this select menu</option>
-            {mountains.mountains.map((mountain) => {
-              return (
-                <option key={mountain.name} value={mountain.name}>{mountain.name}</option>
-              )
-            })}
-          </Form.Select>
-        </Form.Group>
-        {selectedMountain && 
-        <MountainCard 
-          {...selectedMountain}
-        />
-        }
-      </Container>
+      <div className='MountainList'>
+        <Container className="container-width">
+          <br></br>
+          <Form.Group className="mb-3 " controlId="formBasicEmail">
+            <Form.Label className="h4 fw-bolder">Select a Mountain</Form.Label>
+            <Form.Select aria-label="Default select example" onChange={handleMountainChange}>
+              <option>Open this select menu</option>
+              {mountains.mountains.map((mountain) => {
+                return (
+                  <option key={mountain.name} value={mountain.name}>{mountain.name}</option>
+                )
+              })}
+            </Form.Select>
+          </Form.Group>
+          {selectedMountain && 
+          <MountainCard 
+            {...selectedMountain}
+          />
+          }
+        </Container>
+      </div>
+        <RandomMountains mountainsToDisplay={mountainsToDisplay} />
     </div>
   );
 }

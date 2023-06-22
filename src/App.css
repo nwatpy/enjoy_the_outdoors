@@ -60,7 +60,7 @@
 }
 
 .header-navbar a:visited {
-  color: white; /* same color as regular state */
+  color: white !important; /* same color as regular state */
 }
 
 a {

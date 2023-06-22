@@ -13,7 +13,7 @@ function ParkCampgrounds(locationID) {
   }, [locationID]);
 
   const getCampgrounds = async () => {
-    const campgrounds = await getParkCampgrounds(locationID, 3);
+    const campgrounds = await getParkCampgrounds(locationID);
     setCampgrounds(campgrounds);
   };
 

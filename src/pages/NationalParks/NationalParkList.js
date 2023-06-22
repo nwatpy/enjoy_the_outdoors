@@ -28,7 +28,7 @@ function NationalParkList(parkList) {
               <td>{park.State}</td>
               <td>{park.LocationID}</td>
               <td>
-                <Link to={`/parkinfo/${park.LocationID}/${park.LocationName}`}>Park Details </Link>
+                <Link to={`/parkinfo/${park.LocationID}/${park.LocationName}`}>Link </Link>
               </td>
             </tr>
           );

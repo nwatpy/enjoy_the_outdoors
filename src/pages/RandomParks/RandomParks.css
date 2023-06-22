@@ -1,11 +1,12 @@
 .RandomParks {
     display: flex;
-    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 60px;
-}
-
-.RandomParkCard {
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+  
+  .RandomParkCard {
     margin: 10px;
     max-width: 250px;
-}
+  }

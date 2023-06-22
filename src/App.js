@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import NationalParks from "./pages/NationalParks/NationalParks";
 import Mountains from "./pages/Mountains/Mountains";
+import SkiFree from "./pages/SkiFree/SkiFreeGame";
 import Footer from "./Footer";
 import Header from "./Header";
 import mountainList from "./assets/data/mountains.json";
@@ -49,6 +50,7 @@ function App() {
           <Route path="/" element={<Home mountainsToDisplay={mountainsToDisplay} parksToDisplay={parksToDisplay} />} />
           <Route path="/nationalparks" element={<NationalParks parksToDisplay={parksToDisplay} />} />
           <Route path="/mountains" element={<Mountains mountainsToDisplay={mountainsToDisplay} />} />
+          <Route path="/skifree" element={<SkiFree />} />
         </Routes>
       </div>
       <Footer />

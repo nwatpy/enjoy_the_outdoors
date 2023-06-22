@@ -47,7 +47,6 @@
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  margin-bottom: 60px; /* add a margin equal to the height of the footer */
 }
 
 @media only screen and (max-width: 768px) {

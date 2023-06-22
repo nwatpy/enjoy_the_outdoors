@@ -7,6 +7,7 @@ import Mountains from "./pages/Mountains/Mountains";
 import SkiFree from "./pages/SkiFree/SkiFreeGame";
 import Footer from "./Footer";
 import Header from "./Header";
+import ParkInfo from "./pages/ParkInfo/ParkInfo";
 import mountainList from "./assets/data/mountains.json";
 import parklist from "./assets/data/nationalparks.json";
 import getParkImage from "./utils";
@@ -51,6 +52,7 @@ function App() {
           <Route path="/nationalparks" element={<NationalParks parksToDisplay={parksToDisplay} />} />
           <Route path="/mountains" element={<Mountains mountainsToDisplay={mountainsToDisplay} />} />
           <Route path="/skifree" element={<SkiFree />} />
+          <Route path="/parkinfo/:locationID" element={<ParkInfo />} />
         </Routes>
       </div>
       <Footer />

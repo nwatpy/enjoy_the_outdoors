@@ -53,6 +53,7 @@ function App() {
           <Route path="/mountains" element={<Mountains mountainsToDisplay={mountainsToDisplay} />} />
           <Route path="/skifree" element={<SkiFree />} />
           <Route path="/parkinfo/:locationID/:locationName" element={<ParkInfo />} />
+          <Route path="/*" element={<Home mountainsToDisplay={mountainsToDisplay} parksToDisplay={parksToDisplay} />} />
         </Routes>
       </div>
       <Footer />

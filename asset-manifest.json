@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/enjoy_the_outdoors/static/css/main.e9dc77bf.css",
-    "main.js": "/enjoy_the_outdoors/static/js/main.05a13d43.js",
+    "main.js": "/enjoy_the_outdoors/static/js/main.975094d5.js",
     "static/js/787.304d8fbc.chunk.js": "/enjoy_the_outdoors/static/js/787.304d8fbc.chunk.js",
     "static/media/mountainbackgroundblue.jpeg": "/enjoy_the_outdoors/static/media/mountainbackgroundblue.40da436f9e3c631c7ec7.jpeg",
     "static/media/abomsnowman.gif": "/enjoy_the_outdoors/static/media/abomsnowman.01059ebfbf60093144a4.gif",
     "index.html": "/enjoy_the_outdoors/index.html",
     "main.e9dc77bf.css.map": "/enjoy_the_outdoors/static/css/main.e9dc77bf.css.map",
-    "main.05a13d43.js.map": "/enjoy_the_outdoors/static/js/main.05a13d43.js.map",
+    "main.975094d5.js.map": "/enjoy_the_outdoors/static/js/main.975094d5.js.map",
     "787.304d8fbc.chunk.js.map": "/enjoy_the_outdoors/static/js/787.304d8fbc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e9dc77bf.css",
-    "static/js/main.05a13d43.js"
+    "static/js/main.975094d5.js"
   ]
 }

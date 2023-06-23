@@ -1,14 +1,14 @@
 import Card from 'react-bootstrap/Card';
 import React from "react";
-import { getSunsetForMountain } from "./sunsetUtils.js";
+import { getSunriseAndSunsetForMountain } from "./sunsetUtils.js";
 
 function MountainCard({img, desc, elevation, effort, coords}) {
-  const [sunsetData, setSunsetData] = React.useState(null);
+  const [sunriseSunsetData, setSunriseSunsetData] = React.useState(null);
 
   React.useEffect(() => {
-    getSunsetForMountain(coords)
+    getSunriseAndSunsetForMountain(coords)
       .then(data => {
-        setSunsetData(data);
+        setSunriseSunsetData(data.results);
       })
       .catch(error => {
         console.error(error);
@@ -24,10 +24,10 @@ function MountainCard({img, desc, elevation, effort, coords}) {
             <strong>Elevation:</strong> {elevation} feet <br/>
             <strong>Effort Required:</strong> {effort} <br/>
             <strong>Latitude:</strong> {coords.lat}, <strong>Longitude:</strong> {coords.lng} <br/>
-            {sunsetData && (
+            {sunriseSunsetData && (
               <>
-                <strong>Sunrise:</strong> {sunsetData.sunrise} <br/>
-                <strong>Sunset:</strong> {sunsetData.sunset} <br/>
+                <strong>Sunrise:</strong> {sunriseSunsetData.sunrise} <br/>
+                <strong>Sunset:</strong> {sunriseSunsetData.sunset} <br/>
               </>
             )}
           </Card.Text>

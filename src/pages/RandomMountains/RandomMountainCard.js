@@ -1,15 +1,15 @@
 import React from "react";
 import "./RandomMountains.css";
 import Card from "react-bootstrap/Card";
-import { getSunsetForMountain } from "../Mountains/sunsetUtils.js";
+import { getSunriseAndSunsetForMountain } from "../Mountains/sunsetUtils.js";
 
 function RandomMountainCard({ name, desc, img, coords }) {
-  const [sunsetData, setSunsetData] = React.useState(null);
+  const [sunriseSunsetData, setSunriseSunsetData] = React.useState(null);
 
   React.useEffect(() => {
-    getSunsetForMountain(coords)
+    getSunriseAndSunsetForMountain(coords)
       .then(data => {
-        setSunsetData(data);
+        setSunriseSunsetData(data.results);
       })
       .catch(error => {
         console.error(error);
@@ -25,10 +25,10 @@ function RandomMountainCard({ name, desc, img, coords }) {
         <Card.Text>
           {desc}<br />
           <br />
-          {sunsetData && (
+          {sunriseSunsetData && (
               <>
-                <strong>Sunrise: {sunsetData.sunrise} <br/>
-                Sunset: {sunsetData.sunset}</strong> <br/>
+                <strong>Sunrise: {sunriseSunsetData.sunrise} <br/>
+                Sunset: {sunriseSunsetData.sunset}</strong> <br/>
               </>
             )}
         </Card.Text>

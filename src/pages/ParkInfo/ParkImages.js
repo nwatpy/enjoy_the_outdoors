@@ -8,12 +8,12 @@ function ParkImages(locationID) {
   const [images, setImages] = useState([]);
   const params = useParams();
 
+  const getParkInfo = async () => {
+    const images = await getParkImages(locationID, 3);
+    setImages(images);
+  };
+
   useEffect(() => {
-    const getParkInfo = async () => {
-      const images = await getParkImages(locationID, 3);
-      setImages(images);
-    };
-    
     if (locationID) {
       getParkInfo();
     }

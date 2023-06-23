@@ -12,7 +12,7 @@ function ParkImages(locationID) {
         const images = await getParkImages(locationID, 3);
         setImages(images);
       };
-      
+
       getParkInfo();
     }
   }, [locationID]);
@@ -21,7 +21,7 @@ function ParkImages(locationID) {
     <CardGroup>
       {images.length > 0 &&
         images.map((image) => (
-          <Card style={{ width: "18rem" }}>
+          <Card key={image} style={{ width: "18rem" }}>
             <Card.Img variant="top" src={image} />
           </Card>
         ))}

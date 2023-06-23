@@ -5,7 +5,6 @@ import ParkImages from "./ParkImages";
 import ParkCampgrounds from "./ParkCampgrounds";
 import ParkArticles from "./ParkArticles";
 
-
 function ParkInfo() {
   const { locationID, locationName } = useParams();
 
@@ -16,7 +15,6 @@ function ParkInfo() {
       <h1 className="title-bar">Images</h1>
       <ParkImages locationID={locationID} />
 
-      <h1 className="title-bar">Campgrounds</h1>
       <ParkCampgrounds locationID={locationID} />
 
       <h1 className="title-bar">Articles</h1>

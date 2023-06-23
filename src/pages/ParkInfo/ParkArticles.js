@@ -21,7 +21,7 @@ function ParkArticles(locationID) {
     <CardGroup>
       {articles.length > 0 &&
         articles.map((article) => (
-          <Card style={{ width: "18rem" }}>
+          <Card key={article.id} style={{ width: "18rem" }}>
             <Card.Img variant="top" src={article.listingImage?.url} />
             <Card.Body>
               <Card.Title>{article.title}</Card.Title>

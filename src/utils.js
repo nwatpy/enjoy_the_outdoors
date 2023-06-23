@@ -49,15 +49,17 @@ const getParkArticles = async (parkCode) => {
 const getParkCampgrounds = async (parkCode) => {
     const res = await axios.get(`https://developer.nps.gov/api/v1/campgrounds?parkCode=${parkCode.locationID}&api_key=${apiKey}&limit=10`);
     const campgrounds = [];
-    if (res.status === 200) {
+    if (res.status === 200 && res.data.data.length > 3) {
         let i = 0;
         while (campgrounds.length < 3) {
+          
             const campground = res.data.data[i]
             if (campground.images[0]) {
                 campgrounds.push(campground);
             }
             i++;
         }
+    
         return campgrounds;
     }
 }

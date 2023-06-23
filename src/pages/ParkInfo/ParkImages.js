@@ -1,12 +1,10 @@
 import Card from "react-bootstrap/Card";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
 import { getParkImages } from "../../utils";
 import { CardGroup } from "react-bootstrap";
 
 function ParkImages(locationID) {
   const [images, setImages] = useState([]);
-  const { id } = useParams();
 
   useEffect(() => {
     if (locationID) {

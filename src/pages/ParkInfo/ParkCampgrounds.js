@@ -3,20 +3,18 @@ import { useEffect, useState } from "react";
 import { CardGroup } from "react-bootstrap";
 import { getParkCampgrounds } from "../../utils";
 
-function ParkCampgrounds(locationID) {
+function ParkCampgrounds({ locationID }) { // Add curly braces around locationID to make it a destructured prop
   const [campgrounds, setCampgrounds] = useState([]);
 
   useEffect(() => {
+    const getCampgrounds = async () => { // Move getCampgrounds function inside useEffect
+      const campgrounds = await getParkCampgrounds(locationID);
+      setCampgrounds(campgrounds);
+    };
     if (locationID) {
       getCampgrounds();
     }
   }, [locationID]);
-
-  const getCampgrounds = async () => {
-    const campgrounds = await getParkCampgrounds(locationID);
-    setCampgrounds(campgrounds);
-  };
-
 
   return (
     <CardGroup>

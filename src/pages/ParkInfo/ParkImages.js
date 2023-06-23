@@ -9,15 +9,15 @@ function ParkImages(locationID) {
   const { id } = useParams();
 
   useEffect(() => {
-    const getParkInfo = async () => {
-      const images = await getParkImages(id, 3);
-      setImages(images);
-    };
-
-    if (id) {
+    if (locationID) {
+      const getParkInfo = async () => {
+        const images = await getParkImages(locationID, 3);
+        setImages(images);
+      };
+      
       getParkInfo();
     }
-  }, [id]);
+  }, [locationID]);
 
   return (
     <CardGroup>

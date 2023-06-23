@@ -1,5 +1,5 @@
 import { useParams } from "react-router-dom";
-import { Card, Container } from "react-bootstrap";
+import { Container } from "react-bootstrap";
 import "./ParkInfo.css";
 import ParkImages from "./ParkImages";
 import ParkCampgrounds from "./ParkCampgrounds";

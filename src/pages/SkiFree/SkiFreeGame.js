@@ -17,6 +17,7 @@ function SkiFreeGame() {
       src="https://nwatpy.github.io/skifree.js/"
       frameborder="0"
       allowfullscreen="true"
+      title="SkiFree game"
     />
   );
 }

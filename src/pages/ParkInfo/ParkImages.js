@@ -6,17 +6,18 @@ import { CardGroup } from "react-bootstrap";
 
 function ParkImages(locationID) {
   const [images, setImages] = useState([]);
+  const params = useParams();
 
   useEffect(() => {
+    const getParkInfo = async () => {
+      const images = await getParkImages(locationID, 3);
+      setImages(images);
+    };
+    
     if (locationID) {
       getParkInfo();
     }
-  }, [locationID]);
-
-  const getParkInfo = async () => {
-    const images = await getParkImages(locationID, 3);
-    setImages(images);
-  };
+  }, [locationID, getParkInfo]);
 
   return (
     <CardGroup>

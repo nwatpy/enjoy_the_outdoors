@@ -7,16 +7,15 @@ function ParkCampgrounds(locationID) {
   const [campgrounds, setCampgrounds] = useState([]);
 
   useEffect(() => {
+    const getCampgrounds = async () => {
+      const campgrounds = await getParkCampgrounds(locationID);
+      setCampgrounds(campgrounds);
+    };
+    
     if (locationID) {
       getCampgrounds();
     }
-  }, [locationID]);
-
-  const getCampgrounds = async () => {
-    const campgrounds = await getParkCampgrounds(locationID);
-    setCampgrounds(campgrounds);
-  };
-
+  }, [locationID, getCampgrounds]);
 
   return (
     <CardGroup>

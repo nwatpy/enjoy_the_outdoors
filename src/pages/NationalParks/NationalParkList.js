@@ -19,7 +19,7 @@ function NationalParkList(parkList) {
           return (
             <tr key={park.LocationId}>
               <td>
-                <a target="_blank" href={park.Visit}>
+                <a target="_blank" rel="noreferrer" href={park.Visit}>
                   {park.LocationName}
                 </a>
               </td>

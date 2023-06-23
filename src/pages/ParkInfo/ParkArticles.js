@@ -10,7 +10,7 @@ function ParkArticles(locationID) {
     if (locationID) {
       getArticles();
     } 
-  }, [locationID]);
+  }, [locationID, getArticles]);
 
   const getArticles = async () => {
     const campgrounds = await getParkArticles(locationID, 3);

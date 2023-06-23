@@ -6,16 +6,16 @@ import { getParkCampgrounds } from "../../utils";
 function ParkCampgrounds(locationID) {
   const [campgrounds, setCampgrounds] = useState([]);
 
-  const getCampgrounds = async () => {
-    const campgrounds = await getParkCampgrounds(locationID);
-    setCampgrounds(campgrounds);
-  };
-
   useEffect(() => {
+    const getCampgrounds = async () => {
+      const campgrounds = await getParkCampgrounds(locationID);
+      setCampgrounds(campgrounds);
+    };
+  
     if (locationID) {
       getCampgrounds();
     }
-  }, [locationID, getCampgrounds]);
+  }, [locationID]);
 
   return (
     <CardGroup>

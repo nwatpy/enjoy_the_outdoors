@@ -1,0 +1,25 @@
+name: Generate Collaborators List
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generate_collaborators:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Install dependencies
+        run: npm install @octokit/rest
+
+      - name: Generate collaborators file
+        env:
+          OWNER: nwatpy
+          REPO: enjoy_the_outdoors
+          GITHUB_TOKEN: ${{ secrets.PAT }}
+        run: |
+          node collaborators.js
+        shell: bash
